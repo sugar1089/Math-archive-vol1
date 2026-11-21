@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATH ARCHIVE | 受験数学</title>
+<style>
+:root{--bg:#f4f6fa;--panel:#fff;--ink:#172033;--muted:#68748a;--line:#e3e8f0;--navy:#17243a;--blue:#3768d8;--blue2:#eaf0ff;--teal:#128477;--gold:#b7791f;--shadow:0 8px 28px rgba(25,42,70,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.7}
+header{background:linear-gradient(125deg,#142239,#263f66);color:white;padding:28px max(22px,calc((100% - 1160px)/2)) 30px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:850;letter-spacing:.12em;font-size:14px}.pill{font-size:12px;border:1px solid #ffffff55;border-radius:30px;padding:4px 11px;color:#dce7ff}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.2;margin:28px 0 10px;letter-spacing:.02em}.lead{color:#d2dced;margin:0;max-width:650px}.stats{display:flex;gap:12px;margin-top:25px;flex-wrap:wrap}.stat{background:#ffffff12;border:1px solid #ffffff20;border-radius:12px;padding:10px 15px;min-width:115px}.stat b{display:block;font-size:21px}.stat span{font-size:12px;color:#d2dced}
+main{max-width:1160px;margin:24px auto;padding:0 18px 60px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tab{border:1px solid var(--line);background:white;padding:10px 16px;border-radius:10px;font-weight:700;color:var(--muted);cursor:pointer}.tab.active{background:var(--navy);color:white;border-color:var(--navy)}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:18px}.side,.content,.hero-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.side{padding:17px;height:max-content;position:sticky;top:12px}.side h3{margin:0 0 12px;font-size:15px}.field{margin-bottom:13px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:5px}select,input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:white;color:var(--ink);font:inherit}.side button,.primary{border:0;background:var(--blue);color:white;padding:10px 14px;border-radius:9px;font-weight:750;cursor:pointer}.side button{width:100%}.content{padding:20px;min-width:0}.content-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--blue);font-weight:850}.content h2{margin:3px 0 5px;font-size:24px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}.count{color:var(--muted);font-size:12px}.question{border:1px solid var(--line);border-radius:13px;padding:17px;margin:14px 0;background:#fff}.qtop{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.qtitle{font-weight:800}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;background:#f0f3f8;color:#526078;padding:3px 8px;border-radius:20px}.tag.basic{background:#e8f6f2;color:#147866}.tag.standard{background:#edf2ff;color:#3458b6}.tag.advanced{background:#fff3df;color:#99600d}.problem{margin:14px 0 12px;white-space:pre-wrap}.answerbox{display:none;border-top:1px dashed var(--line);padding-top:13px;margin-top:13px}.answerbox.open{display:block}.answerbox h4{margin:8px 0 4px;font-size:13px;color:var(--blue)}.answer{font-weight:800}.explain{font-size:14px;white-space:pre-wrap}.actions{display:flex;gap:8px;flex-wrap:wrap}.secondary{border:1px solid var(--line);background:white;color:var(--ink);padding:8px 12px;border-radius:9px;font-weight:700;cursor:pointer}.formula{padding:14px;border:1px solid var(--line);border-radius:12px;margin:10px 0}.formula h3{font-size:16px;margin:0 0 7px}.math{font-family:Georgia,serif;background:#f5f7fb;padding:9px 12px;border-radius:8px;overflow-x:auto;font-size:17px}.note{font-size:13px;color:var(--muted);margin:7px 0 0}.empty{text-align:center;color:var(--muted);padding:40px 12px}.hero-card{padding:18px;margin-bottom:18px;background:linear-gradient(110deg,#fff,#f4f7ff)}.hero-card strong{font-size:16px}.hero-card p{margin:5px 0 0;color:var(--muted);font-size:13px}.progress{height:7px;background:#e8edf5;border-radius:20px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;background:var(--teal);width:0}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:25px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.side{position:static}.content{padding:15px}header{padding:23px 20px}.stat{min-width:95px}.content h2{font-size:21px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="brand">MATH ARCHIVE</div><div class="pill">UNIVERSITY ENTRANCE MATH</div></div>
+ <h1>数学を、武器に。</h1>
+ <p class="lead">公式を理解し、解法を選び、自力で解き切る。高校数学Ⅰ・A・Ⅱ・B・Ⅲ・Cの学習アーカイブ。</p>
+ <div class="stats"><div class="stat"><b>Ⅰ〜Ⅲ・A〜C</b><span>全範囲をカバー</span></div><div class="stat"><b id="problemCount">—</b><span>収録問題</span></div><div class="stat"><b>3段階</b><span>基礎・標準・応用</span></div></div>
+</header>
+<main>
+ <div class="hero-card"><strong>使い方：まず問題を解き、答え → 詳しい解説の順に確認しよう。</strong><p>単元・難易度で絞り込み可能。公式集では受験頻出公式と使う場面を確認できます。問題はオリジナルの学習用サンプルです。</p><div class="progress"><span id="progressBar"></span></div><p id="progressText">解答を確認した問題：0問</p></div>
+ <div class="tabs"><button class="tab active" data-tab="problems">問題演習</button><button class="tab" data-tab="formulas">公式図鑑</button><button class="tab" data-tab="test">ランダム演習</button></div>
+ <section id="problemView" class="layout">
+  <aside class="side">
+   <h3>問題を絞り込む</h3>
+   <div class="field"><label>科目</label><select id="subject"><option value="all">すべて</option><option>数学Ⅰ</option><option>数学A</option><option>数学Ⅱ</option><option>数学B</option><option>数学Ⅲ</option><option>数学C</option></select></div>
+   <div class="field"><label>単元</label><select id="unit"><option value="all">すべての単元</option></select></div>
+   <div class="field"><label>難易度</label><select id="level"><option value="all">すべて</option><option value="基礎">基礎</option><option value="標準">標準</option><option value="応用">応用</option></select></div>
+   <div class="field"><label>キーワード検索</label><input id="search" placeholder="例：最大値、確率、微分"></div>
+   <button id="reset">条件をリセット</button>
+  </aside>
+  <div class="content"><div class="content-head"><div><div class="eyebrow">PRACTICE LIBRARY</div><h2 id="listTitle">問題演習</h2><p class="sub">解答を隠した状態で出題します。</p></div><div class="count" id="resultCount"></div></div><div id="questionList"></div></div>
+ </section>
+ <section id="formulaView" class="content" style="display:none"><div class="eyebrow">FORMULA BOOK</div><h2>受験数学・公式図鑑</h2><p class="sub">公式だけでなく、使う場面と注意点も確認しよう。</p><div id="formulaList"></div></section>
+ <section id="testView" class="content" style="display:none"><div class="eyebrow">QUICK TEST</div><h2>ランダム演習</h2><p class="sub">収録問題からランダムに5問出題します。解答を開いて採点・復習しよう。</p><button class="primary" id="startTest">5問のテストを開始</button><div id="testList"></div></section>
+ <div class="footer">MATH ARCHIVE · 学習用オリジナル問題集 · 解答は学習の参考として利用してください</div>
+</main>
+<script>
+const Q=(subject,unit,level,title,problem,answer,explain)=>({subject,unit,level,title,problem,answer,explain});
+const questions=[
+Q("数学Ⅰ","数と式","基礎","展開と因数分解","次の式を因数分解せよ。\n x²−5x+6","(x−2)(x−3)","積が 6、和が −5 となる2数は −2、−3。\nx²−5x+6=x²−2x−3x+6=(x−2)(x−3)。"),
+Q("数学Ⅰ","数と式","標準","対称式の計算","x+y=5, xy=3 のとき、x²+y² の値を求めよ。","19","(x+y)²=x²+2xy+y² より、x²+y²=(x+y)²−2xy。\n=25−6=19。対称式では x+y と xy にそろえるのが基本。"),
+Q("数学Ⅰ","集合と命題","基礎","必要条件・十分条件","実数 x について、p：x=2、q：x²=4 とする。p は q の何条件か。","十分条件（必要条件ではない）","x=2 なら x²=4 が必ず成り立つので p⇒q。\n一方、x²=4 から x=2 とは限らず x=−2 もある。したがって p は q の十分条件。"),
+Q("数学Ⅰ","二次関数","基礎","平方完成"," y=x²−6x+11 の頂点の座標を求めよ。","(3, 2)","y=(x−3)²−9+11=(x−3)²+2。\nよって頂点は (3,2)。"),
+Q("数学Ⅰ","二次関数","標準","定義域つき最大・最小"," y=x²−4x+1（0≦x≦5）の最小値と最大値を求めよ。","最小値 −3（x=2）、最大値 6（x=5）","y=(x−2)²−3。頂点 x=2 は定義域内なので最小値は −3。\n最大値は端点で比較する。y(0)=1、y(5)=6 より最大値は 6。"),
+Q("数学Ⅰ","二次関数","応用","パラメータと最小値"," y=x²−2ax+3（−1≦x≦2）の最小値を a の範囲で場合分けせよ。","a≦−1：1+2a、−1≦a≦2：3−a²、a≧2：7−4a","平方完成して y=(x−a)²+3−a²。軸 x=a と区間 [−1,2] の位置で分ける。\na<−1 なら左端 x=−1、−1≦a≦2 なら頂点 x=a、a>2 なら右端 x=2 で最小。境界では隣り合う式が一致する。"),
+Q("数学Ⅰ","図形と計量","基礎","正弦定理","△ABCで A=30°、B=45°、a=4 のとき、外接円の半径 R を求めよ。","R=4","正弦定理 a/sin A=2R より、4/(1/2)=2R。\n8=2R なので R=4。"),
+Q("数学Ⅰ","図形と計量","標準","余弦定理","2辺の長さが 5, 7、その間の角が 60°の三角形の残りの辺を求めよ。","√39","余弦定理より c²=5²+7²−2·5·7·cos60°。\n=25+49−35=39。よって c=√39。"),
+Q("数学Ⅰ","データの分析","基礎","分散","データ 2, 4, 6, 8 の分散を求めよ。","5","平均は 5。偏差平方は 9,1,1,9。\n分散=(9+1+1+9)/4=5。"),
+Q("数学A","場合の数","基礎","順列","A,B,C,D の4人から委員長と副委員長を1人ずつ選ぶ方法は何通りか。","12通り","役職が異なるので順序を区別する。4P2=4×3=12。"),
+Q("数学A","場合の数","標準","隣り合う並べ方","5人を1列に並べる。特定の2人 A,B が隣り合う並べ方は何通りか。","48通り","A,B をひとまとまりとみると、4つのまとまりの並べ方は 4! 通り。\nまとまり内部は AB,BA の2通り。よって 2×4!=48。"),
+Q("数学A","確率","基礎","余事象","1個のさいころを2回投げる。少なくとも1回は6が出る確率を求めよ。","11/36","余事象は2回とも6以外。\n求める確率=1−(5/6)²=1−25/36=11/36。"),
+Q("数学A","確率","標準","条件付き確率","赤玉3個、白玉2個から同時に2個取り出す。少なくとも1個が赤だったとき、2個とも赤である確率を求めよ。","3/8","A：2個とも赤、B：少なくとも1個赤 とする。\nP(A)=C(3,2)/C(5,2)=3/10。\nP(B)=1−C(2,2)/C(5,2)=9/10。\nP(A|B)=P(A)/P(B)=(3/10)/(9/10)=1/3。※正しく計算すると 1/3。"),
+Q("数学A","図形の性質","基礎","三角形の内心","三角形の内心とは何か。また、内心から3辺までの距離について述べよ。","3つの内角の二等分線の交点。3辺までの距離は等しい。","内心は内角の二等分線の交点。角の二等分線上の点は、その角をつくる2辺から等距離にある。これを各頂点で用いると3辺までの距離が等しい。"),
+Q("数学A","図形の性質","標準","円周角","同じ弧 AB に対する中心角 AOB が 100°のとき、弧 AB に対する円周角 ACB を求めよ。","50°","同じ弧に対する円周角は中心角の半分。\n∠ACB=100°÷2=50°。"),
+Q("数学A","整数の性質","基礎","ユークリッドの互除法","最大公約数 gcd(84,30) を求めよ。","6","84=2×30+24\n30=1×24+6\n24=4×6。最後の0でない余りが最大公約数なので6。"),
+Q("数学A","整数の性質","標準","一次不定方程式","整数 x,y が 3x+5y=1 を満たすとき、整数解を1組求めよ。","x=2, y=−1","3×2+5×(−1)=6−5=1。よって (2,−1) は整数解。"),
+Q("数学Ⅱ","式と証明","基礎","二項定理","(x+2)⁴ の x² の係数を求めよ。","24","二項定理の一般項は C(4,k)x^(4−k)2^k。\nx²となるのは k=2。係数は C(4,2)×2²=6×4=24。"),
+Q("数学Ⅱ","複素数と方程式","基礎","解と係数の関係","x²−7x+10=0 の2解を α,β とする。α+β, αβ を求めよ。","α+β=7、αβ=10","ax²+bx+c=0 の解と係数の関係は α+β=−b/a、αβ=c/a。\nここでは 7,10。"),
+Q("数学Ⅱ","図形と方程式","標準","円の方程式","中心 (2,−1)、半径 3 の円の方程式を求めよ。","(x−2)²+(y+1)²=9","中心 (a,b)、半径 r の円は (x−a)²+(y−b)²=r²。\n代入して (x−2)²+(y+1)²=9。"),
+Q("数学Ⅱ","図形と方程式","応用","円と直線の位置関係","円 x²+y²=25 と直線 y=3 の共有点の個数を求めよ。","2個","代入して x²+9=25、x²=16。\nx=±4 の2つの実数解があるので共有点は2個。"),
+Q("数学Ⅱ","三角関数","基礎","三角関数の基本値","sin(π/6), cos(π/3), tan(π/4) をそれぞれ求めよ。","1/2, 1/2, 1","30°・60°・45°の基本値を使う。\nsin30°=1/2、cos60°=1/2、tan45°=1。"),
+Q("数学Ⅱ","三角関数","標準","三角方程式","0≦x<2π において sin x=√3/2 を解け。","x=π/3, 2π/3","基準角は π/3。正弦が正になる第1・第2象限なので x=π/3, 2π/3。"),
+Q("数学Ⅱ","指数・対数関数","基礎","指数法則","2³×2⁵÷2⁴ を計算せよ。","16","同じ底の積は指数を足し、商は引く。\n2^(3+5−4)=2⁴=16。"),
+Q("数学Ⅱ","指数・対数関数","標準","対数方程式","log₂(x−1)+log₂(x+1)=3 を解け。","x=3","定義域より x>1。\nlog₂((x−1)(x+1))=3 より x²−1=8。\nx²=9。定義域を満たす x=3。"),
+Q("数学Ⅱ","微分法","基礎","多項式の微分","f(x)=3x³−2x²+5x−7 を微分せよ。","f'(x)=9x²−4x+5","x^n を微分すると nx^(n−1)。定数の微分は0。\n各項を微分して 9x²−4x+5。"),
+Q("数学Ⅱ","微分法","標準","接線の方程式","曲線 y=x²−3x の x=2 における接線を求めよ。","y=x−4","導関数 y'=2x−3。x=2 で傾き1。\n曲線上の点は (2,−2)。よって y+2=x−2、y=x−4。"),
+Q("数学Ⅱ","積分法","基礎","不定積分","∫(6x²−4x+3) dx を求めよ。","2x³−2x²+3x+C","∫x^n dx=x^(n+1)/(n+1)+C。\n各項を積分し、積分定数 C を忘れない。"),
+Q("数学Ⅱ","積分法","標準","定積分と面積","∫₀² (2x+1) dx を求めよ。","6","原始関数は x²+x。\n[x²+x]₀²=(4+2)−0=6。"),
+Q("数学B","数列","基礎","等差数列","初項 3、公差 4 の等差数列の一般項 aₙ を求めよ。","aₙ=4n−1","aₙ=a₁+(n−1)d=3+4(n−1)=4n−1。"),
+Q("数学B","数列","標準","等比数列の和","初項 2、公比 3 の等比数列の初項から第5項までの和を求めよ。","242","S₅=2(3⁵−1)/(3−1)=2×242/2=242。"),
+Q("数学B","数列","応用","漸化式","a₁=1, aₙ₊₁=2aₙ+3 で定める数列の一般項を求めよ。","aₙ=2^(n+1)−3","両辺に3を加えると aₙ₊₁+3=2(aₙ+3)。\nbₙ=aₙ+3 とおけば bₙ₊₁=2bₙ、b₁=4。\nbₙ=4・2^(n−1)=2^(n+1)。よって aₙ=2^(n+1)−3。"),
+Q("数学B","統計的な推測","基礎","標準化","確率変数 X の平均が 10、標準偏差が 2 のとき、X=14 に対応する標準化した値を求めよ。","2","標準化した値は z=(x−μ)/σ。\n(14−10)/2=2。"),
+Q("数学B","統計的な推測","標準","正規分布","標準正規分布 Z について P(−1≦Z≦1) はおよそいくらか。","0.683","標準正規分布表より P(−1≦Z≦1)≈0.6827。\n約0.683。"),
+Q("数学Ⅲ","極限","基礎","多項式の極限","lim(x→2) (x²+3x−1) を求めよ。","9","多項式は連続なので x=2 を代入。\n4+6−1=9。"),
+Q("数学Ⅲ","極限","標準","有理化を使う極限","lim(x→0) {√(x+4)−2}/x を求めよ。","1/4","分子を有理化する。\n{√(x+4)−2}/x × {√(x+4)+2}/{√(x+4)+2}\n=1/(√(x+4)+2)。x→0 で 1/4。"),
+Q("数学Ⅲ","微分法","標準","合成関数の微分","y=(2x²+1)⁵ を微分せよ。","y'=20x(2x²+1)⁴","合成関数の微分。外側を微分して 5(2x²+1)⁴、内側の微分 4x を掛ける。\ny'=20x(2x²+1)⁴。"),
+Q("数学Ⅲ","微分法","応用","増減と極値","f(x)=x³−3x²−9x+1 の極大値・極小値を求めよ。","極大値 6（x=−1）、極小値 −20（x=3）","f'(x)=3x²−6x−9=3(x−3)(x+1)。\n符号は x<−1 で＋、−1<x<3 で−、x>3 で＋。\nf(−1)=6、f(3)=−26? 計算を確認する。\n27−27−27+1=−26。したがって極小値は −26。"),
+Q("数学Ⅲ","積分法","基礎","置換積分","∫ 2x(x²+1)³ dx を求めよ。","(x²+1)⁴/4+C","u=x²+1 とおくと du=2x dx。\n∫u³du=u⁴/4+C=(x²+1)⁴/4+C。"),
+Q("数学Ⅲ","積分法","標準","部分積分","∫ x e^x dx を求めよ。","(x−1)e^x+C","部分積分 ∫u dv=uv−∫v du。\nu=x, dv=e^x dx とすると du=dx, v=e^x。\nxe^x−∫e^x dx=(x−1)e^x+C。"),
+Q("数学C","ベクトル","基礎","内積","|a|=2, |b|=3、なす角が 60°のとき a・b を求めよ。","3","a・b=|a||b|cosθ=2×3×1/2=3。"),
+Q("数学C","ベクトル","標準","内分点の位置ベクトル","点 A,B の位置ベクトルを a,b とする。線分 AB を 2:1 に内分する点 P の位置ベクトルを求めよ（AP:PB=2:1）。","p=(a+2b)/3","内分点の公式。AP:PB=m:n のとき p=(n a+m b)/(m+n)。\nm=2,n=1 より p=(a+2b)/3。"),
+Q("数学C","平面上の曲線","標準","媒介変数表示","x=2cos t, y=3sin t で表される曲線の方程式を求めよ。","x²/4+y²/9=1","cos t=x/2、sin t=y/3。\ncos²t+sin²t=1 より x²/4+y²/9=1。"),
+Q("数学C","複素数平面","基礎","複素数の絶対値","複素数 z=3−4i の絶対値を求めよ。","5","|a+bi|=√(a²+b²)。\n|3−4i|=√(9+16)=5。"),
+Q("数学C","複素数平面","応用","複素数の回転","複素数 z を原点中心に反時計回りに 90°回転した複素数を表せ。","iz","原点中心に角 θ 回転する操作は e^(iθ) を掛けることに対応する。\nθ=π/2 なので e^(iπ/2)=i。したがって iz。")
+];
+// Correct a few deliberately checked arithmetic/results before rendering.
+questions.find(q=>q.title==="条件付き確率").answer="1/3";
+questions.find(q=>q.title==="条件付き確率").explain="A：2個とも赤、B：少なくとも1個赤 とする。\nP(A)=C(3,2)/C(5,2)=3/10。\nP(B)=1−C(2,2)/C(5,2)=9/10。\nP(A|B)=P(A)/P(B)=(3/10)/(9/10)=1/3。";
+questions.find(q=>q.title==="増減と極値").answer="極大値 6（x=−1）、極小値 −26（x=3）";
+questions.find(q=>q.title==="増減と極値").explain="f'(x)=3x²−6x−9=3(x−3)(x+1)。\n符号は x<−1 で＋、−1<x<3 で−、x>3 で＋。\nf(−1)=−1−3+9+1=6。\nf(3)=27−27−27+1=−26。";
+const formulas=[
+["数と式","因数分解の基本形","a²−b²=(a−b)(a+b)\na²±2ab+b²=(a±b)²","平方差・完全平方の形を見つける。"],
+["二次関数","平方完成","ax²+bx+c=a(x+b/2a)²−b²/4a+c","頂点・軸・最大最小を求めるときの基本。"],
+["二次関数","判別式","D=b²−4ac","実数解の個数、グラフとx軸の共有点の個数を調べる。"],
+["図形と計量","正弦定理","a/sin A=b/sin B=c/sin C=2R","外接円の半径、角と対辺の組が分かるときに有効。"],
+["図形と計量","余弦定理","c²=a²+b²−2ab cos C","2辺とその間の角、または3辺から角を求める。"],
+["場合の数","順列・組合せ","nPr=n!/(n−r)!　　nCr=n!/{r!(n−r)!}","順序を区別するなら順列、選ぶだけなら組合せ。"],
+["確率","条件付き確率","P(A|B)=P(A∩B)/P(B)","Bが起きたという条件のもとでAが起きる確率。"],
+["三角関数","加法定理","sin(α±β)=sinαcosβ±cosαsinβ\ncos(α±β)=cosαcosβ∓sinαsinβ","角の和・差、2倍角、合成の出発点。"],
+["三角関数","2倍角","sin2x=2sinx cosx\ncos2x=cos²x−sin²x=1−2sin²x=2cos²x−1","三角方程式や式の整理で頻出。"],
+["指数・対数","対数の性質","logₐMN=logₐM+logₐN\nlogₐ(M/N)=logₐM−logₐN\nlogₐM^k=klogₐM","真数条件 M>0、底 a>0,a≠1 を必ず確認。"],
+["微分法","微分の基本","(xⁿ)'=nxⁿ⁻¹　　(c)'=0","多項式の導関数を求める。"],
+["微分法","接線の方程式","y−f(a)=f'(a)(x−a)","x=a での接線。点の座標と傾き f'(a) を使う。"],
+["積分法","基本積分","∫xⁿdx=xⁿ⁺¹/(n+1)+C（n≠−1）","不定積分では積分定数 C を付ける。"],
+["積分法","定積分と面積","∫ₐᵇ f(x)dx=F(b)−F(a)","面積はグラフがx軸の下にある区間で符号に注意。"],
+["数列","等差数列","aₙ=a₁+(n−1)d\nSₙ=n(a₁+aₙ)/2","一定の差 d をもつ数列。"],
+["数列","等比数列","aₙ=a₁rⁿ⁻¹\nSₙ=a₁(1−rⁿ)/(1−r)（r≠1）","一定の比 r をもつ数列。"],
+["統計的な推測","標準化","Z=(X−μ)/σ","平均0、標準偏差1の標準正規分布に変換する。"],
+["ベクトル","内積","a・b=|a||b|cosθ","垂直条件は a・b=0。成分なら a₁b₁+a₂b₂。"],
+["ベクトル","内分点","AP:PB=m:n のとき p=(n a+m b)/(m+n)","係数は反対側の比になる。"],
+["複素数平面","極形式","z=r(cosθ+i sinθ)","絶対値 r、偏角 θ。回転・積・累乗に便利。"],
+["複素数平面","ド・モアブルの定理","{r(cosθ+i sinθ)}ⁿ=rⁿ(cos nθ+i sin nθ)","複素数の累乗や n 乗根で使う。"],
+["平面上の曲線","楕円の標準形","x²/a²+y²/b²=1","媒介変数 x=a cos t, y=b sin t と対応する。"],
+["極限","代表的な極限","lim(x→0) sin x/x=1","角度はラジアン。三角関数の極限の基本。"],
+["微分法","合成関数の微分","{f(g(x))}'=f'(g(x))g'(x)","外側を微分し、内側の微分を掛ける。"],
+["積分法","部分積分","∫u dv=uv−∫v du","積の形。多項式×指数・対数・三角関数などで使う。"]
+];
+document.getElementById('problemCount').textContent=questions.length+'問';
+const units=[...new Set(questions.map(q=>q.unit))];
+const unitSel=document.getElementById('unit');
+units.forEach(u=>{let o=document.createElement('option');o.value=u;o.textContent=u;unitSel.appendChild(o)});
+let revealed=0;
+function renderQuestions(items,target){
+ const el=document.getElementById(target);el.innerHTML='';
+ if(!items.length){el.innerHTML='<div class="empty">条件に合う問題がありません。絞り込みを変えてみてください。</div>';return}
+ items.forEach((q,i)=>{
+  const real=questions.indexOf(q);
+  const card=document.createElement('article');card.className='question';
+  card.innerHTML=`<div class="qtop"><div class="qtitle">${i+1}. ${q.title}</div><div class="tags"><span class="tag">${q.subject}・${q.unit}</span><span class="tag ${q.level==='基礎'?'basic':q.level==='標準'?'standard':'advanced'}">${q.level}</span></div></div><div class="problem">${q.problem}</div><div class="actions"><button class="secondary showAnswer">答えを見る</button><button class="secondary showExplain">詳しい解説を見る</button></div><div class="answerbox"><h4>ANSWER</h4><div class="answer">${q.answer}</div><h4>解説・考え方</h4><div class="explain">${q.explain}</div></div>`;
+  const box=card.querySelector('.answerbox'),ans=card.querySelector('.showAnswer'),exp=card.querySelector('.showExplain');
+  ans.onclick=()=>{box.classList.add('open');if(!card.dataset.counted){card.dataset.counted='1';revealed++;updateProgress()}};
+  exp.onclick=()=>{box.classList.add('open');if(!card.dataset.counted){card.dataset.counted='1';revealed++;updateProgress()}};
+  el.appendChild(card);
+ });
+}
+function updateProgress(){document.getElementById('progressText').textContent=`解答を確認した問題：${revealed}問`;document.getElementById('progressBar').style.width=Math.min(100,revealed/questions.length*100)+'%'}
+function filter(){
+ const s=document.getElementById('subject').value,u=unitSel.value,l=document.getElementById('level').value,k=document.getElementById('search').value.trim().toLowerCase();
+ const items=questions.filter(q=>(s==='all'||q.subject===s)&&(u==='all'||q.unit===u)&&(l==='all'||q.level===l)&&(!k||[q.title,q.problem,q.unit,q.subject].join(' ').toLowerCase().includes(k)));
+ document.getElementById('resultCount').textContent=items.length+'問';
+ renderQuestions(items,'questionList');
+}
+['subject','unit','level','search'].forEach(id=>document.getElementById(id).addEventListener('input',filter));
+document.getElementById('reset').onclick=()=>{['subject','unit','level'].forEach(id=>document.getElementById(id).value='all');document.getElementById('search').value='';filter()};
+function renderFormulas(){const el=document.getElementById('formulaList');el.innerHTML='';formulas.forEach(([unit,name,formula,usage])=>{let d=document.createElement('div');d.className='formula';d.innerHTML=`<h3>${name} <span class="tag">${unit}</span></h3><div class="math">${formula}</div><p class="note">使う場面：${usage}</p>`;el.appendChild(d)})}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById('problemView').style.display=t.dataset.tab==='problems'?'grid':'none';document.getElementById('formulaView').style.display=t.dataset.tab==='formulas'?'block':'none';document.getElementById('testView').style.display=t.dataset.tab==='test'?'block':'none'});
+document.getElementById('startTest').onclick=()=>{const shuffled=[...questions].sort(()=>Math.random()-.5).slice(0,5);renderQuestions(shuffled,'testList');document.getElementById('testList').scrollIntoView({behavior:'smooth',block:'start'})};
+renderFormulas();filter();
+</script>
+</body></html>
